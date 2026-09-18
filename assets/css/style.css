@@ -40,6 +40,7 @@ body {
     border-radius: 12px;
 }
 
+
 .experimento h2 {
     margin-top: 0;
 }
@@ -73,3 +74,76 @@ body {
     justify-items: stretch;
 }
 
+.layout {
+    margin-top: 40px;
+
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+
+    grid-template-areas:
+    "cabecalho cabecalho"
+    "menu principal"
+    "rodape rodape";
+}
+
+.layout > * {
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.layout-cabecalho {
+    grid-area: cabecalho;
+}
+
+.layout-menu {
+    grid-area: menu;
+}
+
+.layout-principal {
+    grid-area: principal;
+}
+
+.layout-rodape {
+    grid-area: rodape;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "ind1 ind2 ind3 ind4"
+        "principal principal principal secundaria";
+    gap: 20px;
+}
+
+.dashboard h1 {
+    grid-area: titulo;
+}
+
+.indicador:nth-of-type(1) {
+    grid-area: ind1;
+}
+
+.indicador:nth-of-type(2) {
+    grid-area: ind2;
+}
+
+.indicador:nth-of-type(3) {
+    grid-area: ind3;
+}
+
+.indicador:nth-of-type(4) {
+    grid-area: ind4;
+}
+
+.principal {
+    grid-area: principal;
+}
+
+.secundaria {
+    grid-area: secundaria;
+}
